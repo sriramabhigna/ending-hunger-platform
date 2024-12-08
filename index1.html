@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style1.css">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="logo2.png" class="logo" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index1.html">Services</a></li>
+            <!-- <li><a href="#">About Us</a></li>
+            <li><a href="#">Details</a></li> -->
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="deleted_donors_history.php">PreviousDonations</a></li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <section class="container">
+            <div class="card">
+                <h2>BE A DONOR</h2>
+                <div class="card-image car1"></div>
+                <p>"The measure of life is not its duration but its donation." - Peter Marshall. Become a hero for someone by donating surplus food to them. Would you like to give food? If yes, please fill out our form today and become a donor.</p>
+                <div>
+                    <button type="button" id="donorBtn"><b>DONOR</b><span> </span></button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>BE A VOLUNTEER</h2>
+                <div class="card-image car2"></div>
+                <p>"Alone, we can do so little; together, we can do so much." - Helen Keller. Become a volunteer by claiming the food. We would like you to join us and provide your information below. Together, we can make a difference in the lives of others.</p>
+                <div>
+                    <a href="#"><button type="button" id="volunteerBtn">VOLUNTEER<span></span></button></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('donorBtn').addEventListener('click', function() {
+            window.location.href = 'login.php';
+        });
+
+        document.getElementById('volunteerBtn').addEventListener('click', function() {
+            var volunteerBtn = this;
+            volunteerBtn.parentElement.innerHTML = '<button type="button" id="backBtn">BACK<span></span></button>';
+            document.getElementById('backBtn').addEventListener('click', function() {
+                window.location.href = 'request_password.html';
+            });
+        });
+    </script>
+</body>
+</html>

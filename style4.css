@@ -1,0 +1,136 @@
+/* Common styles for the entire page */
+body {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #00796b;
+}
+
+.logo {
+    width: 100px; /* Adjust logo size as needed */
+}
+
+/* Container styles for the contact form */
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust width as needed */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds some spacing between the left and right parts */
+}
+
+.contact-left {
+    flex: 1; /* Makes the form take half the space of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-left-title h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-left-title hr {
+    width: 50px;
+    border: 2px solid #009688;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-inputs:focus {
+    background-color: rgba(255, 255, 255, 1); /* Solid white on focus */
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+    border-color: #009688;
+}
+
+.contact-inputs:hover {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"] {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #00796b;
+    box-shadow: 0 4px 8px rgba(0, 121, 107, 0.2);
+}
+
+/* Styles for the right side with the image */
+.contact-right {
+    flex: 1; /* Makes the image take half the space of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-right img {
+    max-width: 100%; /* Ensures the image does not overflow its container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
